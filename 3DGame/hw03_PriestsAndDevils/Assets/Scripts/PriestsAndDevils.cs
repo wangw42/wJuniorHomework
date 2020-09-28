@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// View
 public class UserGUI : MonoBehaviour {
 	private UserAction action;
 	public int status = 0;
@@ -9,7 +10,7 @@ public class UserGUI : MonoBehaviour {
 	GUIStyle buttonStyle;
 
 	void Start() {
-		action = mainController.getInstance ().currentSceneController as UserAction;
+		action = MainController.getInstance ().currentSceneController as UserAction;
 
 		style = new GUIStyle();
 		style.fontSize = 40;
@@ -36,13 +37,21 @@ public class UserGUI : MonoBehaviour {
 	}
 }
 
-public class mainController : System.Object {
-	private static mainController _instance;
+public interface UserAction {
+	void moveBoat();
+	void characterIsClicked(CharController characterCtrl);
+	void restart();
+}
+
+
+// Model & Controller
+public class MainController : System.Object {
+	private static MainController _instance;
 	public SceneController currentSceneController { get; set; }
 
-	public static mainController getInstance() {
+	public static MainController getInstance() {
 		if (_instance == null) {
-			_instance = new mainController ();
+			_instance = new MainController ();
 		}
 		return _instance;
 	}
@@ -52,13 +61,7 @@ public interface SceneController {
 	void loadResources ();
 }
 
-public interface UserAction {
-	void moveBoat();
-	void characterIsClicked(charController characterCtrl);
-	void restart();
-}
-
-public class moveController: MonoBehaviour {
+public class MoveController: MonoBehaviour {
 	
 	float move_speed = 50;
 	int movePos;	
@@ -99,16 +102,16 @@ public class moveController: MonoBehaviour {
 	}
 }
 
-public class clickController : MonoBehaviour {
+public class ClickController : MonoBehaviour {
 	UserAction action;
-	charController characterController;
+	CharController characterController;
 
-	public void setController(charController characterCtrl) {
+	public void setController(CharController characterCtrl) {
 		characterController = characterCtrl;
 	}
 
 	void Start() {
-		action = mainController.getInstance ().currentSceneController as UserAction;
+		action = MainController.getInstance ().currentSceneController as UserAction;
 	}
 
 	void OnMouseDown() {
@@ -120,17 +123,17 @@ public class clickController : MonoBehaviour {
 	}
 }
 
-public class charController {
+public class CharController {
 	GameObject character;
-	moveController moveInstance;
-	clickController clickController;
+	MoveController moveInstance;
+	ClickController ClickController;
 	int charType;	// 0->priest, 1->devil
 
 	bool onBoat;
 	CoastController coastController;
 
 
-	public charController(string which_character) {	
+	public CharController(string which_character) {	
 		if (which_character == "priest") {
 			character = Object.Instantiate (Resources.Load ("Perfabs/Priest", typeof(GameObject)), Vector3.zero, Quaternion.identity, null) as GameObject;
 			charType = 0;
@@ -138,10 +141,10 @@ public class charController {
 			character = Object.Instantiate (Resources.Load ("Perfabs/Devil", typeof(GameObject)), Vector3.zero, Quaternion.identity, null) as GameObject;
 			charType = 1;
 		}
-		moveInstance = character.AddComponent (typeof(moveController)) as moveController;
+		moveInstance = character.AddComponent (typeof(MoveController)) as MoveController;
 
-		clickController = character.AddComponent (typeof(clickController)) as clickController;
-		clickController.setController (this);
+		ClickController = character.AddComponent (typeof(ClickController)) as ClickController;
+		ClickController.setController (this);
 	}
 
 	public void setName(string name) {
@@ -186,7 +189,7 @@ public class charController {
 
 	public void reset() {
 		moveInstance.reset ();
-		coastController = (mainController.getInstance ().currentSceneController as PriestsAndDevils).fromCoast;
+		coastController = (MainController.getInstance ().currentSceneController as PriestsAndDevils).fromCoast;
 		getOnCoast (coastController);
 		setPosition (coastController.getEmptyPosition ());
 		coastController.getOnCoast (this);
@@ -199,13 +202,13 @@ public class CoastController {
 	Vector3 to_pos = new Vector3(-9,1,0);
 	Vector3[] positions;
 	int to_or_from;	// to->-1, from->1
-	charController[] passengerPlaner;
+	CharController[] passengerPlaner;
 
 	public CoastController(string _to_or_from) {
 		positions = new Vector3[] {new Vector3(6.5F,2.25F,0), new Vector3(7.5F,2.25F,0), new Vector3(8.5F,2.25F,0), 
 			new Vector3(9.5F,2.25F,0), new Vector3(10.5F,2.25F,0), new Vector3(11.5F,2.25F,0)};
 
-			passengerPlaner = new charController[6];
+			passengerPlaner = new CharController[6];
 
 			if (_to_or_from == "from") {
 				coast = Object.Instantiate (Resources.Load ("Perfabs/Stone", typeof(GameObject)), from_pos, Quaternion.identity, null) as GameObject;
@@ -233,15 +236,15 @@ public class CoastController {
 			return pos;
 		}
 
-		public void getOnCoast(charController characterCtrl) {
+		public void getOnCoast(CharController characterCtrl) {
 			int index = getEmptyIndex ();
 			passengerPlaner [index] = characterCtrl;
 		}
 
-	public charController getOffCoast(string passenger_name) {	// 0->priest, 1->devil
+	public CharController getOffCoast(string passenger_name) {	// 0->priest, 1->devil
 		for (int i = 0; i < passengerPlaner.Length; i++) {
 			if (passengerPlaner [i] != null && passengerPlaner [i].getName () == passenger_name) {
-				charController charactorCtrl = passengerPlaner [i];
+				CharController charactorCtrl = passengerPlaner [i];
 				passengerPlaner [i] = null;
 				return charactorCtrl;
 			}
@@ -268,19 +271,19 @@ public class CoastController {
 	}
 
 	public void reset() {
-		passengerPlaner = new charController[6];
+		passengerPlaner = new CharController[6];
 	}
 }
 
 public class BoatController {
 	GameObject boat;
-	moveController moveInstance;
+	MoveController moveInstance;
 	Vector3 fromPosition = new Vector3 (5, 1, 0);
 	Vector3 toPosition = new Vector3 (-5, 1, 0);
 	Vector3[] from_positions;
 	Vector3[] to_positions;
 	int to_or_from; // to->-1; from->1
-	charController[] passenger = new charController[2];
+	CharController[] passenger = new CharController[2];
 
 	public BoatController() {
 		to_or_from = 1;
@@ -291,8 +294,8 @@ public class BoatController {
 		boat = Object.Instantiate (Resources.Load ("Perfabs/Boat", typeof(GameObject)), fromPosition, Quaternion.identity, null) as GameObject;
 		boat.name = "boat";
 
-		moveInstance = boat.AddComponent (typeof(moveController)) as moveController;
-		boat.AddComponent (typeof(clickController));
+		moveInstance = boat.AddComponent (typeof(MoveController)) as MoveController;
+		boat.AddComponent (typeof(ClickController));
 	}
 
 
@@ -335,15 +338,15 @@ public class BoatController {
 		return pos;
 	}
 
-	public void GetOnBoat(charController characterCtrl) {
+	public void GetOnBoat(CharController characterCtrl) {
 		int index = getEmptyIndex ();
 		passenger [index] = characterCtrl;
 	}
 
-	public charController GetOffBoat(string passenger_name) {
+	public CharController GetOffBoat(string passenger_name) {
 		for (int i = 0; i < passenger.Length; i++) {
 			if (passenger [i] != null && passenger [i].getName () == passenger_name) {
-				charController charactorCtrl = passenger [i];
+				CharController charactorCtrl = passenger [i];
 				passenger [i] = null;
 				return charactorCtrl;
 			}
@@ -378,10 +381,10 @@ public class BoatController {
 		if (to_or_from == -1) {
 			Move ();
 		}
-		passenger = new charController[2];
+		passenger = new CharController[2];
 	}
 }
-
+// 游戏主控制器
 public class PriestsAndDevils : MonoBehaviour, SceneController, UserAction {
 
 	readonly Vector3 water_pos = new Vector3(0,0.5F,0);
@@ -392,13 +395,13 @@ public class PriestsAndDevils : MonoBehaviour, SceneController, UserAction {
 	public CoastController fromCoast;
 	public CoastController toCoast;
 	public BoatController boat;
-	private charController[] characters;
+	private CharController[] characters;
 
 	void Awake() {
-		mainController director = mainController.getInstance ();
+		MainController director = MainController.getInstance ();
 		director.currentSceneController = this;
 		userGUI = gameObject.AddComponent <UserGUI>() as UserGUI;
-		characters = new charController[6];
+		characters = new CharController[6];
 		loadResources ();
 	}
 
@@ -415,7 +418,7 @@ public class PriestsAndDevils : MonoBehaviour, SceneController, UserAction {
 
 	private void loadCharacter() {
 		for (int i = 0; i < 3; i++) {
-			charController cha = new charController ("priest");
+			CharController cha = new CharController ("priest");
 			cha.setName("priest" + i);
 			cha.setPosition (fromCoast.getEmptyPosition ());
 			cha.getOnCoast (fromCoast);
@@ -425,7 +428,7 @@ public class PriestsAndDevils : MonoBehaviour, SceneController, UserAction {
 		}
 
 		for (int i = 0; i < 3; i++) {
-			charController cha = new charController ("devil");
+			CharController cha = new CharController ("devil");
 			cha.setName("devil" + i);
 			cha.setPosition (fromCoast.getEmptyPosition ());
 			cha.getOnCoast (fromCoast);
@@ -443,7 +446,7 @@ public class PriestsAndDevils : MonoBehaviour, SceneController, UserAction {
 		userGUI.status = check_game_over ();
 	}
 
-	public void characterIsClicked(charController characterCtrl) {
+	public void characterIsClicked(CharController characterCtrl) {
 		if (characterCtrl.isOnBoat ()) {
 			CoastController whichCoast;
 			if (boat.get_to_or_from () == -1) { // to->-1; from->1
@@ -518,3 +521,5 @@ public class PriestsAndDevils : MonoBehaviour, SceneController, UserAction {
 		}
 	}
 }
+
+
