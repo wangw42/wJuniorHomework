@@ -44,11 +44,7 @@
 };
 
 - (BOOL)kill : (Hero*)h1 andEnemy: (Hero*) h2{
-    if(h1->energy_value <= 0) return false;
-    NSLog(@"发起了攻击，造成1点伤害，消耗1点法力值。");
-    h2->blood_value -= 2;
-    h1->energy_value -= 1;
-    return true;
+    return NO;
 };
 
 
@@ -73,11 +69,15 @@
     return @"刘备";
 };
 
-- (BOOL)kill : (Hero*)h1 andEnemy: (Hero*) h2{
-    if(h1->energy_value <= 0) return false;
+- (void) liukill : (Hero*) ene {
     NSLog(@"刘备发起了攻击: 以德服人，造成3点伤害，消耗4点法力值。");
-    h2->blood_value -= 3;
-    h1->energy_value -= 4;
+    ene->blood_value -= 3;
+    self->energy_value -= 4;
+};
+
+- (BOOL)kill : (Hero*) h2{
+    if(self->energy_value <= 0) return false;
+    [self liukill:h2];
     return true;
 };
 
@@ -105,11 +105,15 @@
     return @"孙权";
 };
 
-- (BOOL)kill : (Hero*)h1 andEnemy: (Hero*) h2{
-    if(h1->energy_value <= 0) return false;
+- (void) sunkill : (Hero*) ene {
     NSLog(@"孙权发起了攻击: 制衡，造成2点伤害，消耗2点法力值。");
-    h2->blood_value -= 2;
-    h1->energy_value -= 2;
+    ene->blood_value -= 2;
+    self->energy_value -= 2;
+};
+
+- (BOOL)kill : (Hero*) h2{
+    if(self->energy_value <= 0) return false;
+    [self sunkill:h2];
     return true;
 };
 
@@ -138,11 +142,15 @@
     return @"曹操";
 };
 
-- (BOOL)kill : (Hero*)h1 andEnemy: (Hero*) h2{
-    if(h1->energy_value <= 0) return false;
+- (void) caokill : (Hero*) ene {
     NSLog(@"曹操发起了攻击: 梦中杀人，造成1点伤害，吸走对方1点法力值。");
-    h2->blood_value -= 1;
-    h2->energy_value -= 1;
+    ene->blood_value -= 1;
+    ene->energy_value -= 1;
+};
+
+- (BOOL)kill :(Hero*) h2{
+    if(self->energy_value <= 0) return false;
+    [self caokill:h2];
     return true;
 };
 

@@ -28,26 +28,27 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSInteger)getenergy_value;
 - (NSString *)getCountry;
 - (NSString *)getName;
-- (BOOL)kill : (Hero*)h1 andEnemy: (Hero*) h2;
+- (BOOL)kill :  (Hero*) h2;
 
 @end
 
 
 @interface Liubei : Hero {
 }
+- (void) liukill : (Hero*) ene;
 
 @end
 
 
 @interface Sunquan : Hero {
 }
-
+- (void) sunkill : (Hero*) ene;
 @end
 
 
 @interface Caocao : Hero {
 }
-
+- (void) caokill : (Hero*) ene;
 @end
 
 

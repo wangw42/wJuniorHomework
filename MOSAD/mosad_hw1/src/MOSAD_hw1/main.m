@@ -43,13 +43,13 @@ int main(int argc, char * argv[]) {
         NSLog(@"Hero1: %@, blood%ld, energy%ld; Heros2: %@, blood%ld, energy%ld", [h1 getName], (long)[h1 getBlood_value], (long)[h1 getenergy_value], [h2 getName], (long)[h2 getBlood_value], (long)[h2 getenergy_value]);
         
         while([h1 getBlood_value] > 0 && [h2 getBlood_value] > 0){
-            bool flag1 = [h1 kill:h1 andEnemy:h2];
+            bool flag1 = [h1 kill:h2];
             if(!flag1){
                 NSLog(@"%@体力不支，失败！", [h1 getName]);
                 break;
             }
             NSLog(@"攻击者: %@, blood%ld, energy%ld; 受害者: %@, blood%ld, energy%ld", [h1 getName], (long)[h1 getBlood_value], (long)[h1 getenergy_value], [h2 getName], (long)[h2 getBlood_value], (long)[h2 getenergy_value]);
-            bool flag2 = [h2 kill:h2 andEnemy:h1];
+            bool flag2 = [h2 kill:h1];
             if(!flag2){
                 NSLog(@"%@体力不支，失败！", [h2 getName]);
                 break;
