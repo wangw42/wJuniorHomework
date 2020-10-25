@@ -10,37 +10,26 @@ public class Sing : MonoBehaviour
         get{
             if(instance == null){
                 instance = (Factory)FindObjectOfType(typeof(Factory));
-                // Debug.Log("asdaszzzz");
             }
         return instance;
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    void Start(){
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Update(){
     }
 }
 
-public class Factory : MonoBehaviour
-{
+public class Factory : MonoBehaviour{
     public List<GameObject> UFO_on = new List<GameObject>();
     public List<GameObject> UFO_off = new List<GameObject>();
 
 
-    public void genUFO()    //借鉴了网上的博客
-    {
-        // Debug.Log("gen!");
+    public void newUFO(){
         GameObject ufo;
-        if(UFO_off.Count == 0)
-        {
+        if(UFO_off.Count == 0){
             float num = Random.Range(0f,9f);
             if(num > 6)
                 ufo = Instantiate(Resources.Load("Prefabs/ufo1"), Vector3.zero, Quaternion.identity) as GameObject;
@@ -49,8 +38,7 @@ public class Factory : MonoBehaviour
             else
                 ufo = Instantiate(Resources.Load("Prefabs/ufo3"), Vector3.zero, Quaternion.identity) as GameObject;
         }
-        else
-        {
+        else{
             ufo = UFO_off[0];
             UFO_off.RemoveAt(0);
         }
@@ -62,8 +50,7 @@ public class Factory : MonoBehaviour
         UFO_on.Add(ufo);
     }
 
-    public void recycleUFO(GameObject obj)
-    {
+    public void freeUFO(GameObject obj){
         for(int i=0; i < UFO_on.Count ;i++){
             if(UFO_on.ToArray()[i] == obj){
                 UFO_on.RemoveAt(i);

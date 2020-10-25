@@ -34,7 +34,7 @@ public class Model : MonoBehaviour, ForModel{
     public void Start(){
         Debug.Log(myfactory);
         for(int i=0; i<10;i++){
-            myfactory.genUFO();
+            myfactory.newUFO();
         }
     }
 
@@ -51,10 +51,10 @@ public class Model : MonoBehaviour, ForModel{
         }
         ufos.Clear();
         foreach(GameObject st in t){
-            myfactory.recycleUFO(st);
+            myfactory.freeUFO(st);
         }
         for(int i=0; i<10;i++){
-            myfactory.genUFO();
+            myfactory.newUFO();
         }
         controller.running=true;
     }
@@ -76,7 +76,7 @@ public class Model : MonoBehaviour, ForModel{
             return;
         Level+=1;
         while (myfactory.UFO_on.Count < 10){
-            myfactory.genUFO();
+            myfactory.newUFO();
         }
     }
 
@@ -104,13 +104,13 @@ public class Model : MonoBehaviour, ForModel{
                 Vector3 v = new Vector3(ufo.transform.localRotation.x,ufo.transform.localRotation.y,ufo.transform.localRotation.z);
                 ufo.transform.Translate(v*Time.deltaTime*Round*2);
                 if(ufo.transform.position.x > 10 || ufo.transform.position.x < -10){
-                    myfactory.recycleUFO(ufo);
+                    myfactory.freeUFO(ufo);
                 }
                 if(ufo.transform.position.y > 10 || ufo.transform.position.y < -10){
-                    myfactory.recycleUFO(ufo);
+                    myfactory.freeUFO(ufo);
                 }
                 if(ufo.transform.position.z < -10){
-                    myfactory.recycleUFO(ufo);
+                    myfactory.freeUFO(ufo);
                 }
             }
         }catch{
@@ -143,7 +143,7 @@ public class Model : MonoBehaviour, ForModel{
 				print (hit.transform.gameObject.name);
 				if (hit.collider.gameObject.tag.Contains("Finish")) { 
 				}
-                myfactory.recycleUFO(hit.transform.gameObject);
+                myfactory.freeUFO(hit.transform.gameObject);
                 Debug.Log("on:"+myfactory.UFO_on.Count);
                 Debug.Log("off"+myfactory.UFO_off.Count);
 			}
