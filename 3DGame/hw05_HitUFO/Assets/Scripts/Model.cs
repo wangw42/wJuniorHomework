@@ -2,12 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface ForModel{
-    void LoadResources();
-    void Pause();
-    void Resume();
-}
-
 public class Model : MonoBehaviour, ForModel{
     public int Score;
     public int Round;
@@ -26,7 +20,7 @@ public class Model : MonoBehaviour, ForModel{
         Round=1;
         Level=0;
         mytime=0;
-        myfactory=Sing.Instance;
+        myfactory=FactInstance.Instance;
         InvokeRepeating("updatetime",1f,1f);
         InvokeRepeating("gentiral",1f,3f);
     }
@@ -151,3 +145,10 @@ public class Model : MonoBehaviour, ForModel{
 
     }
 }
+
+public interface ForModel{
+    void LoadResources();
+    void Pause();
+    void Resume();
+}
+

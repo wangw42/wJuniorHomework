@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Controller : System.Object
-{
+public class Controller : System.Object{
     private static Controller _instance;
 
     public Model currentModel {get; set;}
@@ -24,13 +23,9 @@ public class Controller : System.Object
         Application.targetFrameRate = fps;
     }
 
-    void Start()
-    {
-        
+    void Start(){
     }
 
-    void Update()
-    { 
-        
+    void Update(){   
     }
 }
