@@ -15,7 +15,7 @@
 * 作业2:[简单计算器](./hw02_calculator)
 * 作业3: [太阳系](https://github.com/wangw42/wJuniorHomework/tree/master/3DGame/hw03)、[牧师与魔鬼](./hw03_PriestsAndDevils)
 * 作业4: [牧师与魔鬼动作分离版](hw04_PriestsAndDevils_v2)
-* 作业5: [HitUFO](./hw05_HitUFO)
+* 作业5: [HitUFO](./hw5_HitUFO)
 
 
 
