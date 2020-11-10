@@ -4,7 +4,7 @@
 
 * 使用说明：
 
-  使用Unity3D新建一个项目，然后使用该目录下的Assets替换新建项目中的Assets后，按提示reload后即可运行。
+  使用Unity3D新建一个项目，然后使用该目录下对应游戏目录下的Assets替换新建项目中的Assets后，按提示reload后即可运行。
 
   
 
