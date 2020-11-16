@@ -6,6 +6,7 @@
 * 作业4:[牧师与魔鬼动作分离版、思考题](./3d_hw04.md)
 * 作业5: [HitUFO](./3d_hw5.md)
 * 作业6: [HitUFOv2 & HitTarget](./3d_hw06.md)
+* 作业7: [智能巡逻兵](./3d_hw07.md)
 
 
 
@@ -18,6 +19,7 @@
 * 作业4: [牧师与魔鬼动作分离版](hw04_PriestsAndDevils_v2)
 * 作业5: [HitUFO](./hw05_HitUFO)
 * 作业6: [HitUFOv2 & HitTarget](./hw06_hitUFOv2&hitTarget)
+* 作业7: [智能巡逻兵](./hw07_xunluobing.md)
 
 
 
