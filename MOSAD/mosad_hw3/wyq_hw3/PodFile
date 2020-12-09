@@ -1,0 +1,9 @@
+#podfile
+
+target 'wyq_hw3' do 
+	pod ‘Masonry’
+	pod 'AFNetworking'
+
+	pod 'SDWebImage', '~> 5.0'
+	
+end
