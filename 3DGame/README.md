@@ -8,6 +8,7 @@
 * 作业6: [HitUFOv2 & HitTarget](./3d_hw06.md)
 * 作业7: [智能巡逻兵](./3d_hw07.md)
 * 作业8: [粒子系统](./3d_hw08.md)
+* 作业9: [血条](./3d_hw09.md)
 
 
 
@@ -22,6 +23,7 @@
 * 作业6: [HitUFOv2 & HitTarget](./hw06_hitUFOv2&hitTarget)
 * 作业7: [智能巡逻兵](./hw07_xunluobing)
 * 作业8: [粒子系统](./hw08_particle)
+* 作业9: [血条](./hw09_HealthBar)
 
 
 
