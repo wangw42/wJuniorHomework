@@ -1,0 +1,7 @@
+#podfile
+
+target 'Group15' do 
+	pod ‘Masonry’
+	pod 'AFNetworking'
+	
+end
