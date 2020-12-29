@@ -99,6 +99,7 @@
     self.tabBarController.tabBar.hidden=NO;
 }
 
+#pragma mark post
 - (void)postIt {
     //_postItem.title = _titleField.text;
     _postItem.images = _imageCache;
@@ -228,7 +229,7 @@
     
 }
 
-// 对选中图片的处理
+#pragma mark -- 对选中图片的处理
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info {
     
     [picker dismissViewControllerAnimated:YES completion:nil];
