@@ -1,0 +1,720 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B0BF9411E9891B2009C5B90 /* SettingManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0BF9401E9891B2009C5B90 /* SettingManage.m */; };
+		9B0BF9441E989383009C5B90 /* DWPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0BF9431E989383009C5B90 /* DWPasswordViewController.m */; };
+		9B0BF9481E9893F2009C5B90 /* DWPasswordNumberButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0BF9471E9893F2009C5B90 /* DWPasswordNumberButton.m */; };
+		9B0BF94B1E98BE38009C5B90 /* DWPasswordDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0BF94A1E98BE38009C5B90 /* DWPasswordDisplayView.m */; };
+		9B0BF94E1E98CFE5009C5B90 /* DWPasswordChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0BF94D1E98CFE5009C5B90 /* DWPasswordChecker.m */; };
+		9B0BF9511E98DB45009C5B90 /* DWSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0BF9501E98DB45009C5B90 /* DWSettingViewController.m */; };
+		9B0BF9581E98E687009C5B90 /* DWSettingSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0BF9571E98E687009C5B90 /* DWSettingSwitchTableViewCell.m */; };
+		9B0BF95B1E990B7B009C5B90 /* DWUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0BF95A1E990B7B009C5B90 /* DWUserInfo.m */; };
+		9B4BE1F61E765AA000E7F988 /* DWDiaryContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4BE1F51E765AA000E7F988 /* DWDiaryContentView.m */; };
+		9B4BE1F91E769F1A00E7F988 /* DWDiaryEmotionSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4BE1F81E769F1A00E7F988 /* DWDiaryEmotionSelectorView.m */; };
+		9B4BE1FC1E76B5C200E7F988 /* DWDiaryWeatherSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4BE1FB1E76B5C200E7F988 /* DWDiaryWeatherSelectorView.m */; };
+		9B4C2A3D1E75168400F556A5 /* DWDiaryTypingCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C2A3C1E75168400F556A5 /* DWDiaryTypingCalendarView.m */; };
+		9B4C2A401E753C2D00F556A5 /* DWDiaryTypingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C2A3F1E753C2D00F556A5 /* DWDiaryTypingView.m */; };
+		9B4C2A461E75649600F556A5 /* DWDiaryDismissKeyboardButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C2A451E75649600F556A5 /* DWDiaryDismissKeyboardButton.m */; };
+		9B4C2A481E75796F00F556A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B4C2A471E75796F00F556A5 /* Assets.xcassets */; };
+		9B870B911E7D20BE0040C10C /* DWDiaryAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B870B901E7D20BE0040C10C /* DWDiaryAlertView.m */; };
+		9B870B941E7D2CFD0040C10C /* DWDiaryTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B870B931E7D2CFD0040C10C /* DWDiaryTipsView.m */; };
+		9B8EF06B1E73C9D100841B98 /* DWDiaryCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8EF06A1E73C9D100841B98 /* DWDiaryCalendarView.m */; };
+		9B8EF06E1E73DF5E00841B98 /* DWDiaryCalendarScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8EF06D1E73DF5E00841B98 /* DWDiaryCalendarScrollView.m */; };
+		9BCB95A21E665A6F0011828E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB95A11E665A6F0011828E /* main.m */; };
+		9BCB95A51E665A6F0011828E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB95A41E665A6F0011828E /* AppDelegate.m */; };
+		9BCB95A81E665A6F0011828E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB95A71E665A6F0011828E /* ViewController.m */; };
+		9BCB95AB1E665A6F0011828E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BCB95A91E665A6F0011828E /* Main.storyboard */; };
+		9BCB95B31E665A6F0011828E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BCB95B11E665A6F0011828E /* LaunchScreen.storyboard */; };
+		9BCB95BE1E665A6F0011828E /* Group15_FinalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB95BD1E665A6F0011828E /* Group15_FinalTests.m */; };
+		9BCB95C91E665A6F0011828E /* Group15_FinalUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB95C81E665A6F0011828E /* Group15_FinalUITests.m */; };
+		9BCB95D81E665B4E0011828E /* DWDiaryCellContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB95D71E665B4E0011828E /* DWDiaryCellContentView.m */; };
+		9BCB95DB1E6663710011828E /* DWDiaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB95DA1E6663710011828E /* DWDiaryTableViewCell.m */; };
+		9BFB83FA1E7A4481005C8E64 /* Group15_Final.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB95AC1E665A6F0011828E /* Group15_Final.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9BCB95BA1E665A6F0011828E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BCB95951E665A6F0011828E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BCB959C1E665A6F0011828E;
+			remoteInfo = "Diary_WhatsUrName?";
+		};
+		9BCB95C51E665A6F0011828E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BCB95951E665A6F0011828E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BCB959C1E665A6F0011828E;
+			remoteInfo = "Diary_WhatsUrName?";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9B0BF93F1E9891B2009C5B90 /* SettingManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingManage.h; sourceTree = "<group>"; };
+		9B0BF9401E9891B2009C5B90 /* SettingManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingManage.m; sourceTree = "<group>"; };
+		9B0BF9421E989383009C5B90 /* DWPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWPasswordViewController.h; sourceTree = "<group>"; };
+		9B0BF9431E989383009C5B90 /* DWPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWPasswordViewController.m; sourceTree = "<group>"; };
+		9B0BF9461E9893F2009C5B90 /* DWPasswordNumberButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWPasswordNumberButton.h; sourceTree = "<group>"; };
+		9B0BF9471E9893F2009C5B90 /* DWPasswordNumberButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWPasswordNumberButton.m; sourceTree = "<group>"; };
+		9B0BF9491E98BE38009C5B90 /* DWPasswordDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWPasswordDisplayView.h; sourceTree = "<group>"; };
+		9B0BF94A1E98BE38009C5B90 /* DWPasswordDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWPasswordDisplayView.m; sourceTree = "<group>"; };
+		9B0BF94C1E98CFE5009C5B90 /* DWPasswordChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWPasswordChecker.h; sourceTree = "<group>"; };
+		9B0BF94D1E98CFE5009C5B90 /* DWPasswordChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWPasswordChecker.m; sourceTree = "<group>"; };
+		9B0BF94F1E98DB45009C5B90 /* DWSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWSettingViewController.h; sourceTree = "<group>"; };
+		9B0BF9501E98DB45009C5B90 /* DWSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWSettingViewController.m; sourceTree = "<group>"; };
+		9B0BF9561E98E687009C5B90 /* DWSettingSwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWSettingSwitchTableViewCell.h; sourceTree = "<group>"; };
+		9B0BF9571E98E687009C5B90 /* DWSettingSwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWSettingSwitchTableViewCell.m; sourceTree = "<group>"; };
+		9B0BF9591E990B7B009C5B90 /* DWUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWUserInfo.h; sourceTree = "<group>"; };
+		9B0BF95A1E990B7B009C5B90 /* DWUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWUserInfo.m; sourceTree = "<group>"; };
+		9B4BE1F41E765AA000E7F988 /* DWDiaryContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryContentView.h; sourceTree = "<group>"; };
+		9B4BE1F51E765AA000E7F988 /* DWDiaryContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryContentView.m; sourceTree = "<group>"; };
+		9B4BE1F71E769F1A00E7F988 /* DWDiaryEmotionSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryEmotionSelectorView.h; sourceTree = "<group>"; };
+		9B4BE1F81E769F1A00E7F988 /* DWDiaryEmotionSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryEmotionSelectorView.m; sourceTree = "<group>"; };
+		9B4BE1FA1E76B5C200E7F988 /* DWDiaryWeatherSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryWeatherSelectorView.h; sourceTree = "<group>"; };
+		9B4BE1FB1E76B5C200E7F988 /* DWDiaryWeatherSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryWeatherSelectorView.m; sourceTree = "<group>"; };
+		9B4C2A3B1E75168400F556A5 /* DWDiaryTypingCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryTypingCalendarView.h; sourceTree = "<group>"; };
+		9B4C2A3C1E75168400F556A5 /* DWDiaryTypingCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryTypingCalendarView.m; sourceTree = "<group>"; };
+		9B4C2A3E1E753C2D00F556A5 /* DWDiaryTypingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryTypingView.h; sourceTree = "<group>"; };
+		9B4C2A3F1E753C2D00F556A5 /* DWDiaryTypingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryTypingView.m; sourceTree = "<group>"; };
+		9B4C2A441E75649600F556A5 /* DWDiaryDismissKeyboardButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryDismissKeyboardButton.h; sourceTree = "<group>"; };
+		9B4C2A451E75649600F556A5 /* DWDiaryDismissKeyboardButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryDismissKeyboardButton.m; sourceTree = "<group>"; };
+		9B4C2A471E75796F00F556A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B870B8F1E7D20BE0040C10C /* DWDiaryAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryAlertView.h; sourceTree = "<group>"; };
+		9B870B901E7D20BE0040C10C /* DWDiaryAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryAlertView.m; sourceTree = "<group>"; };
+		9B870B921E7D2CFD0040C10C /* DWDiaryTipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryTipsView.h; sourceTree = "<group>"; };
+		9B870B931E7D2CFD0040C10C /* DWDiaryTipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryTipsView.m; sourceTree = "<group>"; };
+		9B8EF0691E73C9D100841B98 /* DWDiaryCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryCalendarView.h; sourceTree = "<group>"; };
+		9B8EF06A1E73C9D100841B98 /* DWDiaryCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryCalendarView.m; sourceTree = "<group>"; };
+		9B8EF06C1E73DF5E00841B98 /* DWDiaryCalendarScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryCalendarScrollView.h; sourceTree = "<group>"; };
+		9B8EF06D1E73DF5E00841B98 /* DWDiaryCalendarScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryCalendarScrollView.m; sourceTree = "<group>"; };
+		9B8EF06F1E73E4F600841B98 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		9BCB959D1E665A6F0011828E /* Group15_Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Group15_Final.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BCB95A11E665A6F0011828E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9BCB95A31E665A6F0011828E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9BCB95A41E665A6F0011828E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9BCB95A61E665A6F0011828E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9BCB95A71E665A6F0011828E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9BCB95AA1E665A6F0011828E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9BCB95AD1E665A6F0011828E /* Diary_WhatsUrName_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Diary_WhatsUrName_.xcdatamodel; sourceTree = "<group>"; };
+		9BCB95B21E665A6F0011828E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9BCB95B41E665A6F0011828E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BCB95B91E665A6F0011828E /* Group15_FinalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Group15_FinalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BCB95BD1E665A6F0011828E /* Group15_FinalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Group15_FinalTests.m; sourceTree = "<group>"; };
+		9BCB95BF1E665A6F0011828E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BCB95C41E665A6F0011828E /* Group15_FinalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Group15_FinalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BCB95C81E665A6F0011828E /* Group15_FinalUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Group15_FinalUITests.m; sourceTree = "<group>"; };
+		9BCB95CA1E665A6F0011828E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BCB95D61E665B4E0011828E /* DWDiaryCellContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryCellContentView.h; sourceTree = "<group>"; };
+		9BCB95D71E665B4E0011828E /* DWDiaryCellContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryCellContentView.m; sourceTree = "<group>"; };
+		9BCB95D91E6663710011828E /* DWDiaryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryTableViewCell.h; sourceTree = "<group>"; };
+		9BCB95DA1E6663710011828E /* DWDiaryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9BCB959A1E665A6F0011828E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BCB95B61E665A6F0011828E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BCB95C11E665A6F0011828E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B0BF9451E98938D009C5B90 /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				9B0BF9421E989383009C5B90 /* DWPasswordViewController.h */,
+				9B0BF9431E989383009C5B90 /* DWPasswordViewController.m */,
+				9B0BF9461E9893F2009C5B90 /* DWPasswordNumberButton.h */,
+				9B0BF9471E9893F2009C5B90 /* DWPasswordNumberButton.m */,
+				9B0BF9491E98BE38009C5B90 /* DWPasswordDisplayView.h */,
+				9B0BF94A1E98BE38009C5B90 /* DWPasswordDisplayView.m */,
+				9B0BF94C1E98CFE5009C5B90 /* DWPasswordChecker.h */,
+				9B0BF94D1E98CFE5009C5B90 /* DWPasswordChecker.m */,
+			);
+			name = Password;
+			sourceTree = "<group>";
+		};
+		9B0BF9521E98E323009C5B90 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				9B0BF94F1E98DB45009C5B90 /* DWSettingViewController.h */,
+				9B0BF9501E98DB45009C5B90 /* DWSettingViewController.m */,
+				9B0BF9561E98E687009C5B90 /* DWSettingSwitchTableViewCell.h */,
+				9B0BF9571E98E687009C5B90 /* DWSettingSwitchTableViewCell.m */,
+				9B0BF9591E990B7B009C5B90 /* DWUserInfo.h */,
+				9B0BF95A1E990B7B009C5B90 /* DWUserInfo.m */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		9BCB95941E665A6F0011828E = {
+			isa = PBXGroup;
+			children = (
+				9BCB959F1E665A6F0011828E /* Group15_Final */,
+				9BCB95BC1E665A6F0011828E /* Group15_FinalTests */,
+				9BCB95C71E665A6F0011828E /* Group15_FinalUITests */,
+				9BCB959E1E665A6F0011828E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9BCB959E1E665A6F0011828E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BCB959D1E665A6F0011828E /* Group15_Final.app */,
+				9BCB95B91E665A6F0011828E /* Group15_FinalTests.xctest */,
+				9BCB95C41E665A6F0011828E /* Group15_FinalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9BCB959F1E665A6F0011828E /* Group15_Final */ = {
+			isa = PBXGroup;
+			children = (
+				9B4C2A471E75796F00F556A5 /* Assets.xcassets */,
+				9B8EF06F1E73E4F600841B98 /* Constants.h */,
+				9BCB95A31E665A6F0011828E /* AppDelegate.h */,
+				9BCB95A41E665A6F0011828E /* AppDelegate.m */,
+				9BCB95A61E665A6F0011828E /* ViewController.h */,
+				9BCB95A71E665A6F0011828E /* ViewController.m */,
+				9B0BF93F1E9891B2009C5B90 /* SettingManage.h */,
+				9B0BF9401E9891B2009C5B90 /* SettingManage.m */,
+				9BCB95A91E665A6F0011828E /* Main.storyboard */,
+				9BCB95B11E665A6F0011828E /* LaunchScreen.storyboard */,
+				9BCB95B41E665A6F0011828E /* Info.plist */,
+				9BCB95AC1E665A6F0011828E /* Group15_Final.xcdatamodeld */,
+				9BCB95A01E665A6F0011828E /* Supporting Files */,
+				9B0BF9521E98E323009C5B90 /* Setting */,
+				9B0BF9451E98938D009C5B90 /* Password */,
+				9BD39D3A1E8939BE0010C832 /* Browser */,
+				9BD39D3B1E8939D10010C832 /* Calendar */,
+				9BD39D3C1E8939E60010C832 /* WritingDiary */,
+			);
+			path = Group15_Final;
+			sourceTree = "<group>";
+		};
+		9BCB95A01E665A6F0011828E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BCB95A11E665A6F0011828E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9BCB95BC1E665A6F0011828E /* Group15_FinalTests */ = {
+			isa = PBXGroup;
+			children = (
+				9BCB95BD1E665A6F0011828E /* Group15_FinalTests.m */,
+				9BCB95BF1E665A6F0011828E /* Info.plist */,
+			);
+			path = Group15_FinalTests;
+			sourceTree = "<group>";
+		};
+		9BCB95C71E665A6F0011828E /* Group15_FinalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9BCB95C81E665A6F0011828E /* Group15_FinalUITests.m */,
+				9BCB95CA1E665A6F0011828E /* Info.plist */,
+			);
+			path = Group15_FinalUITests;
+			sourceTree = "<group>";
+		};
+		9BD39D3A1E8939BE0010C832 /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				9BCB95D61E665B4E0011828E /* DWDiaryCellContentView.h */,
+				9BCB95D71E665B4E0011828E /* DWDiaryCellContentView.m */,
+				9BCB95D91E6663710011828E /* DWDiaryTableViewCell.h */,
+				9BCB95DA1E6663710011828E /* DWDiaryTableViewCell.m */,
+				9B4BE1F41E765AA000E7F988 /* DWDiaryContentView.h */,
+				9B4BE1F51E765AA000E7F988 /* DWDiaryContentView.m */,
+				9B870B8F1E7D20BE0040C10C /* DWDiaryAlertView.h */,
+				9B870B901E7D20BE0040C10C /* DWDiaryAlertView.m */,
+				9B870B921E7D2CFD0040C10C /* DWDiaryTipsView.h */,
+				9B870B931E7D2CFD0040C10C /* DWDiaryTipsView.m */,
+			);
+			name = Browser;
+			sourceTree = "<group>";
+		};
+		9BD39D3B1E8939D10010C832 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				9B8EF0691E73C9D100841B98 /* DWDiaryCalendarView.h */,
+				9B8EF06A1E73C9D100841B98 /* DWDiaryCalendarView.m */,
+				9B8EF06C1E73DF5E00841B98 /* DWDiaryCalendarScrollView.h */,
+				9B8EF06D1E73DF5E00841B98 /* DWDiaryCalendarScrollView.m */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
+		9BD39D3C1E8939E60010C832 /* WritingDiary */ = {
+			isa = PBXGroup;
+			children = (
+				9B4C2A3B1E75168400F556A5 /* DWDiaryTypingCalendarView.h */,
+				9B4C2A3C1E75168400F556A5 /* DWDiaryTypingCalendarView.m */,
+				9B4C2A3E1E753C2D00F556A5 /* DWDiaryTypingView.h */,
+				9B4C2A3F1E753C2D00F556A5 /* DWDiaryTypingView.m */,
+				9B4BE1F71E769F1A00E7F988 /* DWDiaryEmotionSelectorView.h */,
+				9B4BE1F81E769F1A00E7F988 /* DWDiaryEmotionSelectorView.m */,
+				9B4BE1FA1E76B5C200E7F988 /* DWDiaryWeatherSelectorView.h */,
+				9B4BE1FB1E76B5C200E7F988 /* DWDiaryWeatherSelectorView.m */,
+				9B4C2A441E75649600F556A5 /* DWDiaryDismissKeyboardButton.h */,
+				9B4C2A451E75649600F556A5 /* DWDiaryDismissKeyboardButton.m */,
+			);
+			name = WritingDiary;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9BCB959C1E665A6F0011828E /* Group15_Final */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BCB95CD1E665A6F0011828E /* Build configuration list for PBXNativeTarget "Group15_Final" */;
+			buildPhases = (
+				9BCB95991E665A6F0011828E /* Sources */,
+				9BCB959A1E665A6F0011828E /* Frameworks */,
+				9BCB959B1E665A6F0011828E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Group15_Final;
+			productName = "Diary_WhatsUrName?";
+			productReference = 9BCB959D1E665A6F0011828E /* Group15_Final.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9BCB95B81E665A6F0011828E /* Group15_FinalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BCB95D01E665A6F0011828E /* Build configuration list for PBXNativeTarget "Group15_FinalTests" */;
+			buildPhases = (
+				9BCB95B51E665A6F0011828E /* Sources */,
+				9BCB95B61E665A6F0011828E /* Frameworks */,
+				9BCB95B71E665A6F0011828E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BCB95BB1E665A6F0011828E /* PBXTargetDependency */,
+			);
+			name = Group15_FinalTests;
+			productName = "Diary_WhatsUrName?Tests";
+			productReference = 9BCB95B91E665A6F0011828E /* Group15_FinalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9BCB95C31E665A6F0011828E /* Group15_FinalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BCB95D31E665A6F0011828E /* Build configuration list for PBXNativeTarget "Group15_FinalUITests" */;
+			buildPhases = (
+				9BCB95C01E665A6F0011828E /* Sources */,
+				9BCB95C11E665A6F0011828E /* Frameworks */,
+				9BCB95C21E665A6F0011828E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BCB95C61E665A6F0011828E /* PBXTargetDependency */,
+			);
+			name = Group15_FinalUITests;
+			productName = "Diary_WhatsUrName?UITests";
+			productReference = 9BCB95C41E665A6F0011828E /* Group15_FinalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9BCB95951E665A6F0011828E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Yqi;
+				TargetAttributes = {
+					9BCB959C1E665A6F0011828E = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9TRX467P27;
+						ProvisioningStyle = Automatic;
+					};
+					9BCB95B81E665A6F0011828E = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 83JLR2XBG3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9BCB959C1E665A6F0011828E;
+					};
+					9BCB95C31E665A6F0011828E = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 83JLR2XBG3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9BCB959C1E665A6F0011828E;
+					};
+				};
+			};
+			buildConfigurationList = 9BCB95981E665A6F0011828E /* Build configuration list for PBXProject "Group15_Final" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = 9BCB95941E665A6F0011828E;
+			productRefGroup = 9BCB959E1E665A6F0011828E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9BCB959C1E665A6F0011828E /* Group15_Final */,
+				9BCB95B81E665A6F0011828E /* Group15_FinalTests */,
+				9BCB95C31E665A6F0011828E /* Group15_FinalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9BCB959B1E665A6F0011828E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BCB95B31E665A6F0011828E /* LaunchScreen.storyboard in Resources */,
+				9B4C2A481E75796F00F556A5 /* Assets.xcassets in Resources */,
+				9BCB95AB1E665A6F0011828E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BCB95B71E665A6F0011828E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BCB95C21E665A6F0011828E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BCB95991E665A6F0011828E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BFB83FA1E7A4481005C8E64 /* Group15_Final.xcdatamodeld in Sources */,
+				9B4BE1FC1E76B5C200E7F988 /* DWDiaryWeatherSelectorView.m in Sources */,
+				9B4BE1F91E769F1A00E7F988 /* DWDiaryEmotionSelectorView.m in Sources */,
+				9BCB95A81E665A6F0011828E /* ViewController.m in Sources */,
+				9B870B911E7D20BE0040C10C /* DWDiaryAlertView.m in Sources */,
+				9B0BF94E1E98CFE5009C5B90 /* DWPasswordChecker.m in Sources */,
+				9BCB95D81E665B4E0011828E /* DWDiaryCellContentView.m in Sources */,
+				9BCB95A51E665A6F0011828E /* AppDelegate.m in Sources */,
+				9B0BF9511E98DB45009C5B90 /* DWSettingViewController.m in Sources */,
+				9BCB95DB1E6663710011828E /* DWDiaryTableViewCell.m in Sources */,
+				9B4BE1F61E765AA000E7F988 /* DWDiaryContentView.m in Sources */,
+				9B870B941E7D2CFD0040C10C /* DWDiaryTipsView.m in Sources */,
+				9B8EF06B1E73C9D100841B98 /* DWDiaryCalendarView.m in Sources */,
+				9B8EF06E1E73DF5E00841B98 /* DWDiaryCalendarScrollView.m in Sources */,
+				9B0BF9441E989383009C5B90 /* DWPasswordViewController.m in Sources */,
+				9B0BF9481E9893F2009C5B90 /* DWPasswordNumberButton.m in Sources */,
+				9B0BF94B1E98BE38009C5B90 /* DWPasswordDisplayView.m in Sources */,
+				9BCB95A21E665A6F0011828E /* main.m in Sources */,
+				9B4C2A401E753C2D00F556A5 /* DWDiaryTypingView.m in Sources */,
+				9B4C2A461E75649600F556A5 /* DWDiaryDismissKeyboardButton.m in Sources */,
+				9B0BF95B1E990B7B009C5B90 /* DWUserInfo.m in Sources */,
+				9B4C2A3D1E75168400F556A5 /* DWDiaryTypingCalendarView.m in Sources */,
+				9B0BF9411E9891B2009C5B90 /* SettingManage.m in Sources */,
+				9B0BF9581E98E687009C5B90 /* DWSettingSwitchTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BCB95B51E665A6F0011828E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BCB95BE1E665A6F0011828E /* Group15_FinalTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BCB95C01E665A6F0011828E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BCB95C91E665A6F0011828E /* Group15_FinalUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9BCB95BB1E665A6F0011828E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BCB959C1E665A6F0011828E /* Group15_Final */;
+			targetProxy = 9BCB95BA1E665A6F0011828E /* PBXContainerItemProxy */;
+		};
+		9BCB95C61E665A6F0011828E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BCB959C1E665A6F0011828E /* Group15_Final */;
+			targetProxy = 9BCB95C51E665A6F0011828E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9BCB95A91E665A6F0011828E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BCB95AA1E665A6F0011828E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9BCB95B11E665A6F0011828E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BCB95B21E665A6F0011828E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9BCB95CB1E665A6F0011828E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9BCB95CC1E665A6F0011828E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9BCB95CE1E665A6F0011828E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9TRX467P27;
+				INFOPLIST_FILE = Group15_Final/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "BUPT.Diary-WhatsUrName-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9BCB95CF1E665A6F0011828E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 83JLR2XBG3;
+				INFOPLIST_FILE = Group15_Final/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "BUPT.Diary-WhatsUrName-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9BCB95D11E665A6F0011828E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 83JLR2XBG3;
+				INFOPLIST_FILE = "Diary_WhatsUrName?Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "BUPT.Diary-WhatsUrName-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Group15_Final.app/Group15_Final";
+			};
+			name = Debug;
+		};
+		9BCB95D21E665A6F0011828E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 83JLR2XBG3;
+				INFOPLIST_FILE = "Diary_WhatsUrName?Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "BUPT.Diary-WhatsUrName-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Group15_Final.app/Group15_Final";
+			};
+			name = Release;
+		};
+		9BCB95D41E665A6F0011828E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 83JLR2XBG3;
+				INFOPLIST_FILE = "Diary_WhatsUrName?UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "BUPT.Diary-WhatsUrName-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Diary_WhatsUrName?";
+			};
+			name = Debug;
+		};
+		9BCB95D51E665A6F0011828E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 83JLR2XBG3;
+				INFOPLIST_FILE = "Diary_WhatsUrName?UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "BUPT.Diary-WhatsUrName-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Diary_WhatsUrName?";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BCB95981E665A6F0011828E /* Build configuration list for PBXProject "Group15_Final" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BCB95CB1E665A6F0011828E /* Debug */,
+				9BCB95CC1E665A6F0011828E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BCB95CD1E665A6F0011828E /* Build configuration list for PBXNativeTarget "Group15_Final" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BCB95CE1E665A6F0011828E /* Debug */,
+				9BCB95CF1E665A6F0011828E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BCB95D01E665A6F0011828E /* Build configuration list for PBXNativeTarget "Group15_FinalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BCB95D11E665A6F0011828E /* Debug */,
+				9BCB95D21E665A6F0011828E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BCB95D31E665A6F0011828E /* Build configuration list for PBXNativeTarget "Group15_FinalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BCB95D41E665A6F0011828E /* Debug */,
+				9BCB95D51E665A6F0011828E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9BCB95AC1E665A6F0011828E /* Group15_Final.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9BCB95AD1E665A6F0011828E /* Diary_WhatsUrName_.xcdatamodel */,
+			);
+			currentVersion = 9BCB95AD1E665A6F0011828E /* Diary_WhatsUrName_.xcdatamodel */;
+			path = Group15_Final.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9BCB95951E665A6F0011828E /* Project object */;
+}
