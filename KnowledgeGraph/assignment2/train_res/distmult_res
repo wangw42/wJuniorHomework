@@ -1,0 +1,144 @@
+(base) August:KGE-master YqWang$ bash run.sh train DistMult wn18rr 0 0 512 1024 512 200.0 0.0005 10000 8 0  
+1.7.1
+Start Training......
+2022-01-10 12:22:33,767 INFO     Model: DistMult
+2022-01-10 12:22:33,767 INFO     Data Path: data/wn18rr
+2022-01-10 12:22:33,767 INFO     #entity: 40943
+2022-01-10 12:22:33,767 INFO     #relation: 11
+2022-01-10 12:22:33,892 INFO     #train: 86835
+2022-01-10 12:22:33,900 INFO     #valid: 3034
+2022-01-10 12:22:33,906 INFO     #test: 3134
+2022-01-10 12:22:34,065 INFO     Model Parameter Configuration:
+2022-01-10 12:22:34,065 INFO     Parameter gamma: torch.Size([1]), require_grad = False
+2022-01-10 12:22:34,065 INFO     Parameter embedding_range: torch.Size([1]), require_grad = False
+2022-01-10 12:22:34,065 INFO     Parameter relation_embedding: torch.Size([11, 512]), require_grad = True
+2022-01-10 12:22:34,065 INFO     Parameter entity_embedding: torch.Size([40943, 512]), require_grad = True
+2022-01-10 12:22:35,633 INFO     Ramdomly Initializing DistMult Model...
+2022-01-10 12:22:35,634 INFO     Start Training...
+2022-01-10 12:22:35,634 INFO     init_step = 0
+2022-01-10 12:22:35,634 INFO     batch_size = 512
+2022-01-10 12:22:35,634 INFO     hidden_dim = 512
+2022-01-10 12:22:35,634 INFO     gamma = 200.000000
+2022-01-10 12:22:35,634 INFO     learning_rate = 0.000500
+2022-01-10 12:22:44,055 INFO     Training average loss at step 0: 2.305292
+2022-01-10 12:22:44,056 INFO     Evaluating on Valid Dataset...
+2022-01-10 12:22:46,576 INFO     Evaluating the model... (0/760)
+2022-01-10 12:28:06,577 INFO     Valid MRR at step 0: 0.000172
+2022-01-10 12:28:06,577 INFO     Valid MR at step 0: 20551.016645
+2022-01-10 12:28:06,577 INFO     Valid HITS@1 at step 0: 0.000000
+2022-01-10 12:28:06,577 INFO     Valid HITS@3 at step 0: 0.000000
+2022-01-10 12:28:06,577 INFO     Valid HITS@10 at step 0: 0.000000
+2022-01-10 12:31:24,883 INFO     Training average loss at step 100: 2.022449
+2022-01-10 12:34:32,202 INFO     Training average loss at step 200: 1.673914
+2022-01-10 12:37:39,549 INFO     Training average loss at step 300: 1.458559
+2022-01-10 12:41:06,541 INFO     Training average loss at step 400: 1.294299
+2022-01-10 12:44:18,074 INFO     Training average loss at step 500: 1.172234
+2022-01-10 12:47:24,088 INFO     Training average loss at step 600: 1.080854
+2022-01-10 12:50:48,385 INFO     Training average loss at step 700: 1.002558
+2022-01-10 12:53:54,977 INFO     Training average loss at step 800: 0.928161
+2022-01-10 12:57:01,265 INFO     Training average loss at step 900: 0.879142
+2022-01-10 13:00:09,240 INFO     Training average loss at step 1000: 0.837436
+2022-01-10 13:03:34,023 INFO     Training average loss at step 1100: 0.786805
+2022-01-10 13:06:44,561 INFO     Training average loss at step 1200: 0.754016
+2022-01-10 13:09:50,935 INFO     Training average loss at step 1300: 0.728124
+2022-01-10 13:13:19,311 INFO     Training average loss at step 1400: 0.698595
+2022-01-10 13:16:26,377 INFO     Training average loss at step 1500: 0.669534
+2022-01-10 13:19:31,532 INFO     Training average loss at step 1600: 0.653339
+2022-01-10 13:22:46,659 INFO     Training average loss at step 1700: 0.637503
+2022-01-10 13:26:01,771 INFO     Training average loss at step 1800: 0.610806
+2022-01-10 13:29:08,707 INFO     Training average loss at step 1900: 0.600268
+2022-01-10 13:32:15,699 INFO     Training average loss at step 2000: 0.589239
+2022-01-10 13:35:41,575 INFO     Training average loss at step 2100: 0.573046
+2022-01-10 13:38:48,151 INFO     Training average loss at step 2200: 0.561233
+2022-01-10 13:41:54,363 INFO     Training average loss at step 2300: 0.554124
+2022-01-10 13:45:25,325 INFO     Training average loss at step 2400: 0.545324
+2022-01-10 13:48:32,012 INFO     Training average loss at step 2500: 0.532649
+2022-01-10 13:51:38,575 INFO     Training average loss at step 2600: 0.527599
+2022-01-10 13:54:45,485 INFO     Training average loss at step 2700: 0.522278
+2022-01-10 13:58:10,783 INFO     Training average loss at step 2800: 0.512085
+2022-01-10 14:01:17,733 INFO     Training average loss at step 2900: 0.507007
+2022-01-10 14:04:28,002 INFO     Training average loss at step 3000: 0.503414
+2022-01-10 14:07:52,761 INFO     Training average loss at step 3100: 0.496804
+2022-01-10 14:11:02,021 INFO     Training average loss at step 3200: 0.489405
+2022-01-10 14:14:08,399 INFO     Training average loss at step 3300: 0.485579
+2022-01-10 14:17:26,334 INFO     Training average loss at step 3400: 0.480385
+2022-01-10 14:20:43,435 INFO     Training average loss at step 3500: 0.466007
+2022-01-10 14:23:50,154 INFO     Training average loss at step 3600: 0.455883
+2022-01-10 14:26:55,221 INFO     Training average loss at step 3700: 0.441810
+2022-01-10 14:30:21,310 INFO     Training average loss at step 3800: 0.418034
+2022-01-10 14:33:29,911 INFO     Training average loss at step 3900: 0.395107
+2022-01-10 14:36:35,988 INFO     Training average loss at step 4000: 0.377867
+2022-01-10 14:39:59,844 INFO     Training average loss at step 4100: 0.358654
+2022-01-10 14:43:09,949 INFO     Training average loss at step 4200: 0.335169
+2022-01-10 14:46:16,162 INFO     Training average loss at step 4300: 0.326505
+2022-01-10 14:49:22,501 INFO     Training average loss at step 4400: 0.319022
+2022-01-10 14:52:47,963 INFO     Training average loss at step 4500: 0.301166
+2022-01-10 14:56:03,203 INFO     Training average loss at step 4600: 0.296743
+2022-01-10 14:59:08,226 INFO     Training average loss at step 4700: 0.293979
+2022-01-10 15:02:34,699 INFO     Training average loss at step 4800: 0.286341
+2022-01-10 15:05:43,579 INFO     Training average loss at step 4900: 0.278936
+2022-01-10 15:08:50,024 INFO     Change learning_rate to 0.000020 at step 5000
+2022-01-10 15:08:50,042 INFO     Training average loss at step 5000: 0.278266
+2022-01-10 15:12:04,854 INFO     Training average loss at step 5100: 0.278224
+2022-01-10 15:15:20,479 INFO     Training average loss at step 5200: 0.270361
+2022-01-10 15:18:27,226 INFO     Training average loss at step 5300: 0.270223
+2022-01-10 15:21:33,410 INFO     Training average loss at step 5400: 0.270436
+2022-01-10 15:24:58,767 INFO     Training average loss at step 5500: 0.269746
+2022-01-10 15:28:05,496 INFO     Training average loss at step 5600: 0.269653
+2022-01-10 15:31:11,507 INFO     Training average loss at step 5700: 0.269485
+2022-01-10 15:34:37,346 INFO     Training average loss at step 5800: 0.269231
+2022-01-10 15:37:43,786 INFO     Training average loss at step 5900: 0.269210
+2022-01-10 15:40:49,563 INFO     Training average loss at step 6000: 0.268644
+2022-01-10 15:43:56,572 INFO     Training average loss at step 6100: 0.268850
+2022-01-10 15:47:22,755 INFO     Training average loss at step 6200: 0.268790
+2022-01-10 15:50:29,361 INFO     Training average loss at step 6300: 0.268044
+2022-01-10 15:53:36,539 INFO     Training average loss at step 6400: 0.268628
+2022-01-10 15:57:04,418 INFO     Training average loss at step 6500: 0.267400
+2022-01-10 16:00:11,669 INFO     Training average loss at step 6600: 0.267612
+2022-01-10 16:03:18,274 INFO     Training average loss at step 6700: 0.267850
+2022-01-10 16:06:35,685 INFO     Training average loss at step 6800: 0.267616
+2022-01-10 16:09:51,746 INFO     Training average loss at step 6900: 0.267442
+2022-01-10 16:12:58,842 INFO     Training average loss at step 7000: 0.266895
+2022-01-10 16:16:05,104 INFO     Training average loss at step 7100: 0.266935
+2022-01-10 16:19:30,627 INFO     Training average loss at step 7200: 0.266861
+2022-01-10 16:22:37,810 INFO     Training average loss at step 7300: 0.266252
+2022-01-10 16:25:44,169 INFO     Training average loss at step 7400: 0.266637
+2022-01-10 16:29:08,894 INFO     Training average loss at step 7500: 0.266565
+2022-01-10 16:32:15,964 INFO     Training average loss at step 7600: 0.265431
+2022-01-10 16:35:22,743 INFO     Training average loss at step 7700: 0.266171
+2022-01-10 16:38:29,382 INFO     Training average loss at step 7800: 0.266271
+2022-01-10 16:41:54,044 INFO     Training average loss at step 7900: 0.265816
+2022-01-10 16:45:01,873 INFO     Training average loss at step 8000: 0.265606
+2022-01-10 16:48:07,954 INFO     Training average loss at step 8100: 0.265161
+2022-01-10 16:51:33,694 INFO     Training average loss at step 8200: 0.265189
+2022-01-10 16:54:40,502 INFO     Training average loss at step 8300: 0.265130
+2022-01-10 16:57:47,076 INFO     Training average loss at step 8400: 0.265081
+2022-01-10 17:01:04,614 INFO     Training average loss at step 8500: 0.264684
+2022-01-10 17:04:20,893 INFO     Training average loss at step 8600: 0.264119
+2022-01-10 17:07:27,730 INFO     Training average loss at step 8700: 0.264495
+2022-01-10 17:10:34,686 INFO     Training average loss at step 8800: 0.264795
+2022-01-10 17:14:00,575 INFO     Training average loss at step 8900: 0.264202
+2022-01-10 17:17:07,691 INFO     Training average loss at step 9000: 0.264074
+2022-01-10 17:20:15,537 INFO     Training average loss at step 9100: 0.263715
+2022-01-10 17:23:41,083 INFO     Training average loss at step 9200: 0.263948
+2022-01-10 17:26:48,207 INFO     Training average loss at step 9300: 0.263692
+2022-01-10 17:29:54,714 INFO     Training average loss at step 9400: 0.263599
+2022-01-10 17:33:01,538 INFO     Training average loss at step 9500: 0.263299
+2022-01-10 17:36:25,646 INFO     Training average loss at step 9600: 0.262826
+2022-01-10 17:39:32,835 INFO     Training average loss at step 9700: 0.263662
+2022-01-10 17:42:39,814 INFO     Training average loss at step 9800: 0.262650
+2022-01-10 17:46:06,073 INFO     Training average loss at step 9900: 0.262729
+2022-01-10 17:49:14,765 INFO     Evaluating on Valid Dataset...
+2022-01-10 17:49:18,718 INFO     Evaluating the model... (0/760)
+2022-01-10 17:54:31,350 INFO     Valid MRR at step 9999: 0.411738
+2022-01-10 17:54:31,350 INFO     Valid MR at step 9999: 8241.200890
+2022-01-10 17:54:31,350 INFO     Valid HITS@1 at step 9999: 0.392881
+2022-01-10 17:54:31,350 INFO     Valid HITS@3 at step 9999: 0.418919
+2022-01-10 17:54:31,351 INFO     Valid HITS@10 at step 9999: 0.446770
+2022-01-10 17:54:31,351 INFO     Evaluating on Test Dataset...
+2022-01-10 17:54:33,683 INFO     Evaluating the model... (0/784)
+2022-01-10 17:59:55,246 INFO     Test MRR at step 9999: 0.410860
+2022-01-10 17:59:55,247 INFO     Test MR at step 9999: 8327.140077
+2022-01-10 17:59:55,247 INFO     Test HITS@1 at step 9999: 0.390874
+2022-01-10 17:59:55,247 INFO     Test HITS@3 at step 9999: 0.418634
+2022-01-10 17:59:55,247 INFO     Test HITS@10 at step 9999: 0.450862
